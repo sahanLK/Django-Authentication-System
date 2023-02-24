@@ -1,0 +1,16 @@
+{% extends "main/base.html" %}
+
+{% block content %}
+    <div class="pl-3 pt-3">
+        <h2 class="text-muted">Registered Users</h2>
+    </div>
+    <div class="list-group mt-lg-4 mb-5">
+        {% for item in users %}
+            {% if item.username == user.username %}
+                <a href="{% url 'user-info' item.id %}" class="list-group-item list-group-item-action active">{{ item.username }}<small class="ml-5 font-italic">- Logged in</small></a>
+            {%  else %}
+                <a href="{% url 'user-info' item.id %}" class="list-group-item list-group-item-action">{{ item.username }}</a>
+            {% endif %}
+        {% endfor %}
+    </div>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends "main/base.html" %}
+
+{% block content %}
+    <h3 class="border-bottom text-muted pb-1 mb-4 pt-3 text-center">User Information</h3>
+    <fieldset disabled>
+        {% for key, value in user_obj.items %}
+            <div class="form-group">
+                <label for="disabledTextInput">{{ key }}</label>
+                <input type="text" id="disabledTextInput" class="form-control" value="{{ value }}">
+            </div>
+        {% endfor %}
+        </fieldset>
+{% endblock %}
