@@ -1,1 +1,2 @@
-Django Authentication System
+Simple Django Authentication System
+
