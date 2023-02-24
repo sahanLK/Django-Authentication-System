@@ -1,1 +1,2 @@
 django_authentication/media/
+*db.sqlite3
